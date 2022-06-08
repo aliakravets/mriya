@@ -1,0 +1,250 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+}
+.introduce img{
+    width: 600px;
+}
+.introduce{
+    display: flex;
+    box-shadow: inset 5em 2em gold;
+    margin-bottom: 30px;
+}
+.introduce-text{
+    padding: 10px;
+    
+    h1{
+        margin-bottom: 5px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 25px;
+    }
+}
+.line{
+    width: 1200px;
+    height: 1px;
+    background-color: grey;
+}
+h2{
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.history-block01, .history-block02{
+    gap: 10px;
+    margin-bottom: 40px;
+    display: flex;
+    .history-text{
+        width: 700px;
+    }
+    img{
+        width: 500px;
+        height: 300px;
+    }
+    p{
+        line-height: 25px;
+    }
+}
+a{
+    width: 200px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    background-color: gold;
+    padding-top: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    margin: 0;
+    margin-top: 20px;
+}
+a:hover{
+    transition: 0.5s;
+    background-color: rgb(214, 165, 5);
+}
+.constructor{
+    line-height: 25px;
+    h2{
+        border-bottom: 5px solid red;
+        padding-bottom: 5px;
+    }
+}
+.constructor-content{
+    img{
+        width: 450px;
+        height: 300px;
+    }
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+.main-foto{
+    width: 1200px;
+    margin-top: 20px;
+    img{
+        width: 100%;
+    }
+}
+.facts{
+    border: 3px solid gold;
+    padding: 10px;
+
+    h2{
+        text-align: center;
+    }
+
+    ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        list-style-type: none;
+        gap: 10px;
+
+        li{
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 10px;
+
+            img{
+                width: 200px;
+                border-radius: 100%;
+            }
+        }
+    }
+}
+
+.table{
+    margin-bottom: 20px;
+    h2{
+        text-align: center;
+    }
+
+    table{
+        box-shadow: 10px 10px gold;
+        tr{
+            td{
+                border: 2px solid black;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+.video{
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width:600px) and (max-width:1023px){
+    .container{
+        min-width: 100%;
+
+        .introduce{
+            min-width: 100%;
+            display: flex;
+            flex-direction:column;
+            box-shadow: none;
+
+            .introduce-text{
+                overflow: hidden;
+                max-height: 0;
+                font-size: 0;
+            }
+
+            img{
+                min-width: 100%;
+                order:-1;
+            }
+        }
+
+        line{
+            min-width: 100%;
+        }
+
+        .history{
+            .history-content{
+                .history-block01{
+                    display: flex;
+                    flex-direction: column;
+
+                    img{
+                        min-width: 100%;
+                        min-height: 00px;
+                    }
+                    
+                    .history-text{
+                        min-width: 100%;
+                    }
+                }
+
+                .history-block02{
+                    display: flex;
+                    flex-direction: column-reverse;
+
+                    img{
+                        min-width: 100%;
+                        min-height: 600px;
+                    }
+                    
+                    .history-text{
+                        min-width: 100%;
+                    }
+                }
+            }
+
+            a{
+                overflow: hidden;
+                max-height: 0;
+                padding: 0;
+                font-size: 0;
+            }
+        }
+
+        .constructor{
+            margin-bottom: 10px;
+            h2{
+                max-height: 0;
+                font-size: 0;
+                border: none;
+            }
+            .constructor-content{
+                display: flex;
+                flex-direction: column;
+                
+                img{
+                    min-width: 100%;
+                    min-height: 700px;
+                }
+
+                .constructor-text{
+                    min-width: 100%;
+                }
+            }
+        }
+
+        .facts{
+            ul{
+                display: flex;
+                flex-direction: column;
+
+                li{
+                    display: flex;
+                    flex-direction: column;
+
+                    img{
+                        border-radius: 0;
+                        min-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
